@@ -9,4 +9,15 @@ public class Point
     public bool IsCross;
     public Segment Land;
     public Segment Circle;
+
+    public Point() {}
+
+    public Point(Vector2 position, Point nextPoint, bool isCross, Segment land, Segment circle) : this()
+    {
+        Position = position;
+        NextPoint = nextPoint;
+        IsCross = isCross;
+        Land = land;
+        Circle = circle;
+    }
 }
