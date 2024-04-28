@@ -7,7 +7,7 @@ using UnityEngine;
 /*
  * Class for destroying land
  */
-public class Destroyer
+public class Destroyer : MonoBehaviour
 {
     [SerializeField] PolygonCollider2D _landCollider;
     [SerializeField] PolygonCollider2D _circleCollider;
@@ -63,14 +63,14 @@ public class Destroyer
                 }
             }
 
-            //var res = Substraction(landLine, circleLine);
-            //allSplines.InsertRange(0, res);
+            var res = Substraction(landLine, circleLine);
+            allSplines.InsertRange(0, res);
         }
 
         _landCollider.GetComponent<Land>().SetPath(allSplines);
     }
 
-    /*public List<List<Point>> Substraction(Line landLine, Line circleLine)
+    public List<List<Point>> Substraction(Line landLine, Line circleLine)
     {
         //set basic nextPoin for circle
         for(int i = 0; i< circleLine.Points.Count; i++)
@@ -83,21 +83,24 @@ public class Destroyer
         for(int l=0; l<landLine.Segments.Count; l++)
         {
             Segment landSegment = landLine.Segments[l];
-            Vector2 currentLandPont = landSegment.Current.Position;
-            Vector2 nextLandPoint = landSegment.Next.Position;
+            Vector2 currentLandPont = landLine.Segments[l].Current.Position;
+            Vector2 nextLandPoint = landLine.Segments[l].Next.Position;
 
             //checking which circle points intersecting land points
-            for(int c = 0;  c < circleLine.Points.Count; c++)
+            for(int c = 0;  c < circleLine.Segments.Count; c++)
             {
                 Segment circleSegment = circleLine.Segments[c];
-                Vector2 currentCirclePoint = circleSegment.Current.Position;
-                Vector2 nextCirclePoint = circleSegment.Next.Position;
+                Vector2 currentCirclePoint = circleLine.Segments[c].Current.Position;
+                Vector2 nextCirclePoint = circleLine.Segments[c].Next.Position;
 
                 if (Intersection.IsIntersecting(currentLandPont, nextLandPoint, currentCirclePoint, nextCirclePoint))
                 {
-                    Vector2 pos = Intersection.GetIntersection(currentLandPont, nextLandPoint, currentCirclePoint, nextCirclePoint);
-                    Point crossPoint = new Point(pos, new Point(), true, landSegment, circleSegment);
-
+                    Vector2 position = Intersection.GetIntersection(currentLandPont, nextLandPoint, currentCirclePoint, nextCirclePoint);
+                    Point crossPoint = new Point();
+                    crossPoint.Position = position;
+                    crossPoint.Land = landSegment;
+                    crossPoint.Circle = circleSegment;
+                    crossPoint.IsCross = true;
                     landSegment.CrossedPoints.Add(crossPoint);
                     circleSegment.CrossedPoints.Add(crossPoint);
                 }
@@ -108,8 +111,88 @@ public class Destroyer
         RecalculateLine(landLine);
         RecalculateLine(circleLine);
 
+        //put in braces for using the same varables
+        {
+            List<Point> allPoints = new List<Point>(landLine.Points);
+            bool isOnLand = true;
+            Point start = allPoints[0];
+            while (allPoints.Count > 0)
+            {
+                Point currentPoint = allPoints[0];
+                //check if current point outside circle
+                if (_circleCollider.ClosestPoint(currentPoint.Position) == currentPoint.Position || currentPoint.IsCross)
+                {
+                    allPoints.RemoveAt(0);
+                    continue;
+                }
 
-    }*/
+                //collect all points and order NextPoint
+                for (int i = 0; i < _testIterations; i++)
+                {
+                    Line currentLine;
+                    bool ccw; //contr clock wise
+                    if (isOnLand)
+                    {
+                        currentLine = landLine;
+                        ccw = true;
+                    }
+                    else
+                    {
+                        currentLine = circleLine;
+                        ccw = false;
+                    }
+
+                    int currentIndex = currentLine.Points.IndexOf(currentPoint);
+                    int nextIndex = GetNext(currentIndex, currentLine.Points.Count, ccw);
+                    currentPoint.NextPoint = currentLine.Points[nextIndex];
+                    allPoints.Remove(currentPoint);
+                    if (currentPoint.NextPoint.IsCross)
+                    {
+                        isOnLand = !isOnLand;
+                    }
+                    currentPoint = currentPoint.NextPoint;
+                    if (start == currentPoint) break;
+                }
+            }
+        }
+
+        //now we will collect all our points
+        { 
+            List<List<Point>> allSplines = new List<List<Point>>();
+            List<Point> allPoints = new List<Point>(landLine.Points);
+            while(allPoints.Count > 0)
+            {
+                Point currentPoint = allPoints[0];
+                //check if current point outside circle
+                if (_circleCollider.ClosestPoint(currentPoint.Position) == currentPoint.Position || currentPoint.IsCross)
+                {
+                    allPoints.RemoveAt(0);
+                    continue;
+                }
+                else
+                {
+                    List<Point> newSpline = new List<Point>();
+                    allSplines.Add(newSpline);
+
+                    // Собираем точки по цепочке
+                    Point startPoint = currentPoint;
+                    Point point = currentPoint;
+
+                    newSpline.Add(point);
+                    allPoints.Remove(point);
+                    for (int i = 0; i < _testIterations; i++)
+                    {
+                        point = point.NextPoint;
+                        if (point == startPoint) break;
+                        newSpline.Add(point);
+                        if (allPoints.Contains(point))
+                            allPoints.Remove(point);
+                    }
+                }
+            }
+            return allSplines;
+        }
+    }
 
     public void RecalculateLine(Line line)
     {

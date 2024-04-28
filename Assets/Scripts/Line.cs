@@ -19,18 +19,18 @@ public class Line
     {
         Line line = new Line();
         List<Point> pts = new List<Point>();
-        List<Segment> segs = new List<Segment>(); 
+        List<Segment> segs = new List<Segment>();
 
         //take points from list
-        foreach(var p in list)
+        for (int i = 0; i < list.Count; i++)
         {
-            Point temp = new Point();
-            temp.Position = p;
-            pts.Add(temp);
+            Point point = new Point();
+            point.Position = list[i];
+            pts.Add(point);
         }
 
         //take segments from list
-        for(int i = 0; i < list.Count; i++) 
+        for (int i = 0; i < list.Count; i++) 
         { 
             //taking first point of our segment
             Segment temp = new Segment();
