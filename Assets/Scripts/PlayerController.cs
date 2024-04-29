@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] LayerMask _groundLayer;
 
     float _horizontal;
-    bool _isRight = true;
+    bool _isRight = false;
 
 
     private void Update()
