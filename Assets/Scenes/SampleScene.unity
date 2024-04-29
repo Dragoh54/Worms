@@ -550,6 +550,7 @@ GameObject:
   - component: {fileID: 1612456865}
   - component: {fileID: 1612456864}
   - component: {fileID: 1612456863}
+  - component: {fileID: 1612456867}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -686,6 +687,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1612456867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612456862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e02913ca1589e964a8cf00df3418c4c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 1
+  _jumpPower: 4
+  _jumpSpeed: 0.5
+  _rb: {fileID: 1612456863}
+  _cl: {fileID: 1612456864}
+  _groundCheck: {fileID: 1612456866}
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &1793816242
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,7 +720,7 @@ GameObject:
   - component: {fileID: 1793816243}
   - component: {fileID: 1793816245}
   - component: {fileID: 1793816246}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Land
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -757,9 +779,13 @@ PolygonCollider2D:
       - {x: -2.7932038, y: 0.99467516}
       - {x: -4.0193405, y: 1.1595517}
       - {x: -5.133584, y: 1.6980473}
+      - {x: -6.0786858, y: 1.8310984}
       - {x: -6.532714, y: 1.7580036}
+      - {x: -7.1069574, y: 1.2699287}
       - {x: -7.68515, y: 1.0488435}
+      - {x: -8.469398, y: 0.7624442}
       - {x: -8.792669, y: 0.30375192}
+      - {x: -8.591915, y: -0.080139905}
       - {x: -7.4976187, y: -0.44230765}
       - {x: -6.7675343, y: -1.7434115}
       - {x: -6.557741, y: -2.944859}
