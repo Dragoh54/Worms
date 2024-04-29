@@ -15,8 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] LayerMask _groundLayer;
 
     float _horizontal;
-    bool _isRight = false;
-
+    bool _isRight = true;
 
     private void Update()
     {
@@ -28,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetButtonUp("Jump") && _rb.velocity.y > 0)
         {
-            _rb.velocity = new Vector2(_rb.velocity.x, _rb.velocity.y * _jumpSpeed);
+            _rb.velocity = new Vector2(_rb.velocity.x, _jumpSpeed);
         }
 
         Flip();
