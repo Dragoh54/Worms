@@ -16,4 +16,4 @@
   * player changing
   * menu
   * setting
-  * main meny
+  * main menu
