@@ -12,6 +12,7 @@
   * water
   * health system
   * multiple players
+  * timer
   * player changing
   * menu
   * setting
