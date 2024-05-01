@@ -173,7 +173,7 @@ TextureImporter:
         width: 54
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,6 +181,27 @@ TextureImporter:
       bones: []
       spriteID: 82237df8a944e954ea89e7b6416ddc05
       internalID: -1974891552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_3
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 13
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e95c3bb1b182e5842b73b4e4a97a252b
+      internalID: 1533956821
       vertices: []
       indices: 
       edges: []
@@ -199,6 +220,7 @@ TextureImporter:
       WormsSprites_0: -1384931476
       WormsSprites_1: 145228808
       WormsSprites_2: -1974891552
+      WormsSprites_3: 1533956821
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
