@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] Rigidbody2D _rb;
     [SerializeField] Collider2D _cl;
+    [SerializeField] SpriteRenderer _spriteRenderer;
     
     [SerializeField] Transform _groundCheck;
     [SerializeField] LayerMask _groundLayer;
@@ -39,9 +40,7 @@ public class PlayerController : MonoBehaviour
         if (_isRight && _horizontal < 0f || !_isRight && _horizontal > 0f)
         {
             _isRight = !_isRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
+            _spriteRenderer.flipX = _isRight;
         }
     }
 
@@ -60,4 +59,6 @@ public class PlayerController : MonoBehaviour
             _isGrounded = false;
         }
     }
+
+    public bool IsGrounded { get { return _isGrounded; } }
 }

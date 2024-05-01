@@ -6,21 +6,23 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     [SerializeField] Renderer _renderer;
-    [SerializeField] float _sencetivity = 0.01f;
 
     Rigidbody2D _playerRB;
+    PlayerController _playerContr;
     Camera _camera;
 
     private void Start()
     {
         _renderer.enabled = false;
         _camera = Camera.main;
-        _playerRB = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
+        GameObject player = GameObject.FindWithTag("Player");
+        _playerRB = player.GetComponent<Rigidbody2D>();
+        _playerContr = player.GetComponent<PlayerController>();
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && _playerContr.IsGrounded)
         {
             _renderer.enabled = true;
             _playerRB.bodyType = RigidbodyType2D.Static;
