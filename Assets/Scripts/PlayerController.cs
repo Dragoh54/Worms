@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,6 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] float _speed;
     [SerializeField] float _jumpPower;
-    [SerializeField] float _jumpSpeed;
 
     [SerializeField] Rigidbody2D _rb;
     [SerializeField] Collider2D _cl;
@@ -16,18 +16,14 @@ public class PlayerController : MonoBehaviour
 
     float _horizontal;
     bool _isRight = true;
+    bool _isGrounded = false;
 
     private void Update()
     {
         _horizontal = Input.GetAxis("Horizontal"); 
-        if(Input.GetButtonDown("Jump") && IsGrounded())
+        if(Input.GetKeyDown(KeyCode.Space) && _isGrounded)
         {
             _rb.velocity = new Vector2(_rb.velocity.x, _jumpPower);
-        }
-
-        if(Input.GetButtonUp("Jump") && _rb.velocity.y > 0)
-        {
-            _rb.velocity = new Vector2(_rb.velocity.x, _jumpSpeed);
         }
 
         Flip();
@@ -38,11 +34,6 @@ public class PlayerController : MonoBehaviour
         _rb.velocity = new Vector2(_horizontal * _speed, _rb.velocity.y);
     }
 
-    public bool IsGrounded()
-    {
-        return Physics2D.OverlapCircle(_groundCheck.position, 0.2f, _groundLayer);
-    }
-
     private void Flip()
     {
         if (_isRight && _horizontal < 0f || !_isRight && _horizontal > 0f)
@@ -51,6 +42,22 @@ public class PlayerController : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == ("Ground"))
+        {
+            _isGrounded = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == ("Ground"))
+        {
+            _isGrounded = false;
         }
     }
 }
