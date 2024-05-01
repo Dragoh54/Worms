@@ -11,6 +11,8 @@ public class Shooting : MonoBehaviour
     PlayerController _playerContr;
     Camera _camera;
 
+    bool _isAiming = false;
+
     private void Start()
     {
         _renderer.enabled = false;
@@ -26,9 +28,10 @@ public class Shooting : MonoBehaviour
         {
             _renderer.enabled = true;
             _playerRB.bodyType = RigidbodyType2D.Static;
+            _isAiming = true;
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && _isAiming)
         {
             Vector3 screenMousePosition = Input.mousePosition;
             Vector3 worldMousePosition = _camera.ScreenToWorldPoint(screenMousePosition);
@@ -41,6 +44,7 @@ public class Shooting : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             _playerRB.bodyType = RigidbodyType2D.Dynamic;
+            _isAiming = false;
         }
     }
 }

@@ -32,7 +32,10 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rb.velocity = new Vector2(_horizontal * _speed, _rb.velocity.y);
+        if (_isGrounded)
+        {
+            _rb.velocity = new Vector2(_horizontal * _speed, _rb.velocity.y);
+        }
     }
 
     private void Flip()

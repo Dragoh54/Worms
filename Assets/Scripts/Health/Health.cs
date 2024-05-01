@@ -5,29 +5,28 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public float maxHealth;
-    private float _hp;
+    
+    [SerializeField] Healthbar _healthbar;
 
-    public bool isAlive;
-
-    public RectTransform healthBar;
+    float _hp;
 
     void Start()
     {
         _hp = maxHealth;
-        isAlive = true;
+
+        _healthbar.UpdateHealthBar(maxHealth, _hp); 
     }
 
     public void TakeDamage(float amount)
     {
         _hp -= amount;
+        _healthbar.UpdateHealthBar(maxHealth, _hp);
+        Debug.Log(_hp);
 
         if (_hp <= 0)
         {
             _hp = 0;
-            isAlive = false;
             Destroy(this);
         }
-
-        healthBar.sizeDelta = new Vector2(_hp, healthBar.sizeDelta.y);
     }
 }
