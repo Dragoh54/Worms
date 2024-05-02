@@ -22,7 +22,7 @@ public class Ammo : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         _destroyer.transform.position = transform.position;
-        Invoke(nameof(DoCut), 0.001f);
+        Invoke(nameof(DoCut), 0.0001f);
 
         _active = true;
     }

@@ -13,13 +13,13 @@ public class Destroyer : MonoBehaviour
     [SerializeField] PolygonCollider2D _circleCollider;
     [SerializeField] int _testIterations = 10;
 
-    private void Update()
+    /*private void Update()
     {
         if (Input.GetMouseButtonDown(1))
         {
             DoCut();
         }
-    }
+    }*/
 
     public void DoCut()
     {
