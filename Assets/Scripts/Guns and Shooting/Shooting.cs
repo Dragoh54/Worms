@@ -6,12 +6,15 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     [SerializeField] Renderer _renderer;
+    [SerializeField] Ammo _ammo;
+    [SerializeField] GameObject _launcher;
 
     Rigidbody2D _playerRB;
     PlayerController _playerContr;
     Camera _camera;
 
     bool _isAiming = false;
+    float _speedMultiplier = 0f;
 
     private void Start()
     {
@@ -24,14 +27,14 @@ public class Shooting : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && _playerContr.IsGrounded)
+        if (Input.GetMouseButtonDown(1) && _playerContr.IsGrounded)
         {
             _renderer.enabled = true;
             _playerRB.bodyType = RigidbodyType2D.Static;
             _isAiming = true;
         }
 
-        if (Input.GetMouseButton(0) && _isAiming)
+        if (_isAiming)
         {
             Vector3 screenMousePosition = Input.mousePosition;
             Vector3 worldMousePosition = _camera.ScreenToWorldPoint(screenMousePosition);
@@ -39,12 +42,25 @@ public class Shooting : MonoBehaviour
 
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+            if (Input.GetMouseButton(1))
+            {
+                _speedMultiplier += 0.003f;
+            }
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonDown(0) && _isAiming && _speedMultiplier!=0)
         {
+            Vector3 screenMousePosition = Input.mousePosition;
+            Vector3 worldMousePosition = _camera.ScreenToWorldPoint(screenMousePosition);
+            Vector3 direction = worldMousePosition - transform.position;
+            Vector3 velocity = direction * _speedMultiplier;
+
+            Ammo newBomb = Instantiate(_ammo, _launcher.transform.position, Quaternion.identity);
+            newBomb.SetVelocity(velocity);
+
             _playerRB.bodyType = RigidbodyType2D.Dynamic;
-            _isAiming = false;
         }
+
     }
 }
