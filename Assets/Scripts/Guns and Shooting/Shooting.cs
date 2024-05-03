@@ -19,6 +19,7 @@ public class Shooting : MonoBehaviour
 
     bool _isAiming = false;
     float _speedMultiplier = 0.01f;
+    bool _isShoot;
 
     private void Start()
     {
@@ -30,6 +31,7 @@ public class Shooting : MonoBehaviour
         _playerContr = player.GetComponent<PlayerController>();
         _charger.Charge(false);
         _cf = FindObjectOfType<CameraFollow>();
+        _isShoot = false;
     }
 
     private void Update()
@@ -77,8 +79,10 @@ public class Shooting : MonoBehaviour
             _speedMultiplier = 0.01f;
             _charger.Charge(false);
             _pointer.enabled = false;
+            _isShoot = true;
             //_playerContr.enabled = true;
         }
-
     }
+
+    public bool IsShoot {get { return _isShoot; } }
 }
