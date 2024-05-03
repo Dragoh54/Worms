@@ -53,7 +53,7 @@ public class Shooting : MonoBehaviour
             if (Input.GetMouseButton(1) && _speedMultiplier <= _maxSpeedMultiplier)
             {
                 _speedMultiplier += Time.deltaTime;
-                Debug.Log(_speedMultiplier);
+                //Debug.Log(_speedMultiplier);
                 _charger.UpdateChargeBar(_speedMultiplier,_maxSpeedMultiplier); 
             }
         }

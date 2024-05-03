@@ -41,7 +41,4 @@ public class Circle : MonoBehaviour
         _collider.CreatePrimitive(_sides, Vector2.one);
         _colliderRenderer.CreateMesh();
     }
-
-
-
 }
