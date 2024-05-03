@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class Ammo : MonoBehaviour
 {
@@ -10,7 +9,7 @@ public class Ammo : MonoBehaviour
 
     Destroyer _destroyer;
     PolygonCollider2D _destroyerCollider;
-    bool _active;
+    bool _active = true;
 
     private void Start()
     {
@@ -23,8 +22,6 @@ public class Ammo : MonoBehaviour
         _destroyer.transform.position = transform.position;
         Invoke(nameof(DoCut), 0.0001f);
         Hit();
-
-        _active = true;
     }
 
     void DoCut()
@@ -58,9 +55,12 @@ public class Ammo : MonoBehaviour
                         GameObject targetObject = collider.gameObject;
                         Health playerHp = targetObject.GetComponent<Health>();
                         playerHp.TakeDamage(_dmg);
+                        _active = false;
 ;                   }
                 }
             }
         }
     }
+    
+    public bool IsActive { get { return _active; } }
 }

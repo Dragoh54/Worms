@@ -10,7 +10,7 @@ public class Circle : MonoBehaviour
     [SerializeField] int _sides;
     [SerializeField] PolygonCollider2D _collider;
 
-    private void Update()
+    /*private void Update()
     {
         if (Application.isPlaying)
         {
@@ -29,7 +29,7 @@ public class Circle : MonoBehaviour
                 transform.localScale /= 1.1f;
             }
         }
-    }
+    }*/
 
     private void OnValidate()
     {

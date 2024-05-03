@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeTurn : MonoBehaviour
+public class TurnManager : MonoBehaviour
 {
     [SerializeField] List<GameObject> _players;
 
     int _turn;
     int _playersNumber;
+
     Shooting _shoot;
+    Ammo _ammo;
 
     private void Start()
     {
@@ -18,16 +20,17 @@ public class ChangeTurn : MonoBehaviour
 
     private void Update()
     {
-        ChangePerson();
-        Debug.Log(_turn);
+        _shoot = _players[_turn].GetComponentInChildren<Shooting>();
+        _ammo = FindAnyObjectByType<Ammo>();
+        //Debug.Log(_turn);
+        NextTurn();
     }
 
-    public void ChangePerson()
+    public void NextTurn()
     {
-        _shoot = _players[_turn].GetComponentInChildren<Shooting>();
-        if (_shoot.IsShoot) 
+        if (_shoot.IsShoot && !_ammo)
         {
-            if(_turn + 1 == _playersNumber)
+            if (_turn + 1 == _playersNumber)
             {
                 _turn = 0;
             }
@@ -35,6 +38,10 @@ public class ChangeTurn : MonoBehaviour
             {
                 _turn++;
             }
+
+            _shoot.IsShoot = false;
         }
     }
+
+    public int Turn { get { return _turn; } }
 }
