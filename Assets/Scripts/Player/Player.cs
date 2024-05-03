@@ -27,8 +27,11 @@ public class Player : MonoBehaviour
         if(_turnManager.Turn == playerId)
         {
             _isActive = true;
-            Wait(!_isActive);
-            _cf.ChangeTarget(gameObject);
+            if (!_shooting.IsShoot)
+            {
+                Wait(!_isActive);
+                _cf.ChangeTarget(gameObject);
+            }
         }
         else
         {
@@ -42,4 +45,6 @@ public class Player : MonoBehaviour
         _playerController.enabled = !wait;
         _shooting.enabled = !wait;
     }
+
+    public bool IsActive { get { return _isActive; } }
 }

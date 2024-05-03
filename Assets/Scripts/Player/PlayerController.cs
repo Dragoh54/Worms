@@ -11,9 +11,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Rigidbody2D _rb;
     [SerializeField] Collider2D _cl;
     [SerializeField] SpriteRenderer _spriteRenderer;
+    [SerializeField] Player player;
     
     [SerializeField] Transform _groundCheck;
     [SerializeField] LayerMask _groundLayer;
+
+    public float raycastDistance = 1f;
 
     float _horizontal;
     bool _isRight = true;
@@ -22,7 +25,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         _horizontal = Input.GetAxis("Horizontal"); 
-        if(Input.GetKeyDown(KeyCode.Space) && _isGrounded)
+        if(Input.GetKeyDown(KeyCode.Space) && _isGrounded && player.IsActive)
         {
             _rb.velocity = new Vector2(_rb.velocity.x, _jumpPower);
         }
@@ -32,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_isGrounded)
+        if (_isGrounded && player.IsActive)
         {
             _rb.velocity = new Vector2(_horizontal * _speed, _rb.velocity.y);
         }

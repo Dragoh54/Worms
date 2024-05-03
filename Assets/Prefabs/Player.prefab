@@ -48,7 +48,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 126923494470974558}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 2193b376b7b59b0488f93bc4d7ced471, type: 2}
+  m_Material: {fileID: 6200000, guid: 1f1af782be5b7d541b919404ba9368a6, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -86,11 +86,11 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1f1af782be5b7d541b919404ba9368a6, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -118,10 +118,12 @@ MonoBehaviour:
   _rb: {fileID: 8715397739669884443}
   _cl: {fileID: 5569949065790037969}
   _spriteRenderer: {fileID: 6049315162678146342}
+  player: {fileID: 1306801289051399623}
   _groundCheck: {fileID: 9035280362350697335}
   _groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  raycastDistance: 1
 --- !u!114 &4808903594005054157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -758,8 +760,10 @@ MonoBehaviour:
   _ammo: {fileID: 517027163015860306, guid: 241b62dd1a3ae2245848c5210b5810d3, type: 3}
   _launcher: {fileID: 973303316797203567}
   _pointer: {fileID: 3392674459955314058}
-  _maxSpeedMultiplier: 6.5
   _charger: {fileID: 1069686957841228572}
+  _maxSpeedMultiplier: 6.5
+  _rigidbody: {fileID: 8715397739669884443}
+  _playerContr: {fileID: 4854609532446115723}
 --- !u!1 &4709368200888313229
 GameObject:
   m_ObjectHideFlags: 0
