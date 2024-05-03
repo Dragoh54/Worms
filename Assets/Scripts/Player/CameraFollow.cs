@@ -21,11 +21,14 @@ public class CameraFollow : MonoBehaviour
     {
         if (_currentTarget == null)
         {
-            ReturnDefaultTarget();
+            StartCoroutine(WaitCoroutine(2f));
         }
 
-        Vector3 targetPosition = _currentTarget.position + offset;
-        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+        if (_currentTarget != null)
+        {
+            Vector3 targetPosition = _currentTarget.position + offset;
+            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+        }
     }
 
     public void ChangeTarget(GameObject target)
@@ -36,5 +39,12 @@ public class CameraFollow : MonoBehaviour
     public void ReturnDefaultTarget()
     {
         _currentTarget = _defaultTarget;
+    }
+
+
+    IEnumerator WaitCoroutine(float time)
+    {
+        yield return new WaitForSeconds(time);
+        ReturnDefaultTarget();
     }
 }

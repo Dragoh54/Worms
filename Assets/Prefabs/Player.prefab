@@ -742,7 +742,7 @@ MonoBehaviour:
   _ammo: {fileID: 517027163015860306, guid: 241b62dd1a3ae2245848c5210b5810d3, type: 3}
   _launcher: {fileID: 973303316797203567}
   _pointer: {fileID: 3392674459955314058}
-  _maxSpeedMultiplier: 6
+  _maxSpeedMultiplier: 6.5
   _charger: {fileID: 1069686957841228572}
 --- !u!1 &4709368200888313229
 GameObject:

@@ -61,7 +61,7 @@ public class Shooting : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(0) && _isAiming && _speedMultiplier!=0)
+        if (Input.GetMouseButtonDown(0) && _isAiming)
         {
             Vector3 screenMousePosition = Input.mousePosition;
             Vector3 worldMousePosition = _camera.ScreenToWorldPoint(screenMousePosition);
@@ -77,7 +77,7 @@ public class Shooting : MonoBehaviour
             _speedMultiplier = 0.01f;
             _charger.Charge(false);
             _pointer.enabled = false;
-            _playerContr.enabled = true;
+            //_playerContr.enabled = true;
         }
 
     }
