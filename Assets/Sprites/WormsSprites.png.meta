@@ -206,6 +206,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: WormsSprites_4
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 47
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd950727a02c95489f5d6e1dbbf14de
+      internalID: -631787657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -221,6 +242,7 @@ TextureImporter:
       WormsSprites_1: 145228808
       WormsSprites_2: -1974891552
       WormsSprites_3: 1533956821
+      WormsSprites_4: -631787657
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -46,7 +46,8 @@ public class Shooting : MonoBehaviour
 
             if (Input.GetMouseButton(1) && _speedMultiplier <= _maxSpeedMultiplier)
             {
-                _speedMultiplier += 0.003f;
+                _speedMultiplier += Time.deltaTime;
+                Debug.Log(_speedMultiplier);
             }
         }
 
@@ -61,6 +62,7 @@ public class Shooting : MonoBehaviour
             newBomb.SetVelocity(velocity);
 
             _playerRB.bodyType = RigidbodyType2D.Dynamic;
+            _speedMultiplier = 0.1f;
         }
 
     }
