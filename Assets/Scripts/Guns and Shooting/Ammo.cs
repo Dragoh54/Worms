@@ -6,7 +6,6 @@ using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCou
 public class Ammo : MonoBehaviour
 {
     [SerializeField] float _dmg;
-
     [SerializeField] Rigidbody2D _rigidbody;
 
     Destroyer _destroyer;

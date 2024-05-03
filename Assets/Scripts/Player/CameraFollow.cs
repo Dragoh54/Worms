@@ -8,11 +8,33 @@ public class CameraFollow : MonoBehaviour
     Vector3 velocity = Vector3.zero;
 
     [SerializeField] float smoothTime = 0.25f;
-    [SerializeField] Transform target;
+    [SerializeField] Transform _defaultTarget;
+
+    Transform _currentTarget;
+
+    private void Start()
+    {
+        _currentTarget = _defaultTarget;
+    }
 
     private void Update()
     {
-        Vector3 targetPosition = target.position + offset;
+        if (_currentTarget == null)
+        {
+            ReturnDefaultTarget();
+        }
+
+        Vector3 targetPosition = _currentTarget.position + offset;
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+    }
+
+    public void ChangeTarget(GameObject target)
+    {
+        _currentTarget = target.transform;
+    }
+
+    public void ReturnDefaultTarget()
+    {
+        _currentTarget = _defaultTarget;
     }
 }

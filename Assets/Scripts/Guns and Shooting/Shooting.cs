@@ -15,6 +15,7 @@ public class Shooting : MonoBehaviour
     Rigidbody2D _playerRB;
     PlayerController _playerContr;
     Camera _camera;
+    CameraFollow _cf;
 
     bool _isAiming = false;
     float _speedMultiplier = 0.01f;
@@ -28,6 +29,7 @@ public class Shooting : MonoBehaviour
         _playerRB = player.GetComponent<Rigidbody2D>();
         _playerContr = player.GetComponent<PlayerController>();
         _charger.Charge(false);
+        _cf = FindObjectOfType<CameraFollow>();
     }
 
     private void Update()
@@ -38,7 +40,8 @@ public class Shooting : MonoBehaviour
             _playerRB.bodyType = RigidbodyType2D.Static;
             _isAiming = true;
             _charger.Charge(true);
-            _pointer.enabled=true;  
+            _pointer.enabled=true;
+            _playerContr.enabled = false;
         }
 
         if (_isAiming)
@@ -65,13 +68,16 @@ public class Shooting : MonoBehaviour
             Vector3 direction = worldMousePosition - transform.position;
             Vector3 velocity = direction * _speedMultiplier;
 
+
             Ammo newBomb = Instantiate(_ammo, _launcher.transform.position, Quaternion.identity);
             newBomb.SetVelocity(velocity);
+            _cf.ChangeTarget(newBomb.gameObject);
 
             _playerRB.bodyType = RigidbodyType2D.Dynamic;
             _speedMultiplier = 0.01f;
             _charger.Charge(false);
             _pointer.enabled = false;
+            _playerContr.enabled = true;
         }
 
     }
