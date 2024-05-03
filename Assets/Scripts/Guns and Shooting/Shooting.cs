@@ -8,6 +8,9 @@ public class Shooting : MonoBehaviour
     [SerializeField] Renderer _renderer;
     [SerializeField] Ammo _ammo;
     [SerializeField] GameObject _launcher;
+    [SerializeField] SpriteRenderer _pointer;
+    [SerializeField] float _maxSpeedMultiplier = 2f;
+    [SerializeField] Charger _charger;
 
     Rigidbody2D _playerRB;
     PlayerController _playerContr;
@@ -15,15 +18,16 @@ public class Shooting : MonoBehaviour
 
     bool _isAiming = false;
     float _speedMultiplier = 0.01f;
-    [SerializeField] float _maxSpeedMultiplier = 2f;
 
     private void Start()
     {
         _renderer.enabled = false;
+        _pointer.enabled = false;
         _camera = Camera.main;
         GameObject player = GameObject.FindWithTag("Player");
         _playerRB = player.GetComponent<Rigidbody2D>();
         _playerContr = player.GetComponent<PlayerController>();
+        _charger.Charge(false);
     }
 
     private void Update()
@@ -33,6 +37,8 @@ public class Shooting : MonoBehaviour
             _renderer.enabled = true;
             _playerRB.bodyType = RigidbodyType2D.Static;
             _isAiming = true;
+            _charger.Charge(true);
+            _pointer.enabled=true;  
         }
 
         if (_isAiming)
@@ -48,6 +54,7 @@ public class Shooting : MonoBehaviour
             {
                 _speedMultiplier += Time.deltaTime;
                 Debug.Log(_speedMultiplier);
+                _charger.UpdateChargeBar(_speedMultiplier,_maxSpeedMultiplier); 
             }
         }
 
@@ -62,7 +69,9 @@ public class Shooting : MonoBehaviour
             newBomb.SetVelocity(velocity);
 
             _playerRB.bodyType = RigidbodyType2D.Dynamic;
-            _speedMultiplier = 0.1f;
+            _speedMultiplier = 0.01f;
+            _charger.Charge(false);
+            _pointer.enabled = false;
         }
 
     }
