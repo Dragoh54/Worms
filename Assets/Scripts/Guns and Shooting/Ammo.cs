@@ -11,7 +11,6 @@ public class Ammo : MonoBehaviour
     [SerializeField] Rigidbody2D _rigidbody;
 
     Destroyer _destroyer;
-    Health _hp;
     bool _active;
 
     private void Start()

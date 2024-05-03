@@ -14,7 +14,8 @@ public class Shooting : MonoBehaviour
     Camera _camera;
 
     bool _isAiming = false;
-    float _speedMultiplier = 0f;
+    float _speedMultiplier = 0.01f;
+    [SerializeField] float _maxSpeedMultiplier = 2f;
 
     private void Start()
     {
@@ -43,7 +44,7 @@ public class Shooting : MonoBehaviour
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-            if (Input.GetMouseButton(1))
+            if (Input.GetMouseButton(1) && _speedMultiplier <= _maxSpeedMultiplier)
             {
                 _speedMultiplier += 0.003f;
             }
