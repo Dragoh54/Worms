@@ -27,7 +27,8 @@ public class TurnManager : MonoBehaviour
             SwitchToNextAlivePlayer();
         }
 
-        //Debug.Log(_turn);
+        AlivePlayers = GameObject.FindGameObjectsWithTag("AlivePlayer").Length;
+        //Debug.Log(_alivePlayersNumber);
 
         _shoot = _players[_turn].GetComponentInChildren<Shooting>();
         _ammo = FindAnyObjectByType<Ammo>();
@@ -57,6 +58,18 @@ public class TurnManager : MonoBehaviour
                 break;
             }
 
+        }
+    }
+
+    public Player GetLastPlayer()
+    {
+        if(AlivePlayers == 1)
+        {
+            return _players[_turn].GetComponent<Player>();
+        }
+        else
+        {
+            throw new System.Exception("More than 1 player alive");
         }
     }
 

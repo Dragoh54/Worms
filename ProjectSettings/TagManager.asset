@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - DeadZone
+  - WinPlayer
+  - AlivePlayer
   layers:
   - Default
   - TransparentFX

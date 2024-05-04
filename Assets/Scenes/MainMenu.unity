@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.030510645, g: 0.03941613, b: 0.1311527, a: 1}
+  m_IndirectSpecularColor: {r: 0.030503577, g: 0.039418526, b: 0.13113694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -575,11 +575,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -724,7 +724,7 @@ RectTransform:
   m_GameObject: {fileID: 1168667615}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.512016, y: 2.512016, z: 2.512016}
+  m_LocalScale: {x: 1.6831009, y: 1.6831009, z: 1.6831009}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 31908513}
@@ -733,7 +733,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.32000002, y: 0.1448167}
   m_AnchorMax: {x: 0.6817884, y: 0.60912037}
-  m_AnchoredPosition: {x: 1, y: 74.5}
+  m_AnchoredPosition: {x: 1, y: 63.724}
   m_SizeDelta: {x: -296, y: -129}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1168667617
@@ -868,7 +868,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -253.87613, y: 0, z: -253.87604, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

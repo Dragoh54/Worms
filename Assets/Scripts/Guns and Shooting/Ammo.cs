@@ -50,7 +50,7 @@ public class Ammo : MonoBehaviour
             {
                 foreach (Collider2D collider in colliders)
                 {
-                    if (collider.gameObject.CompareTag("Player"))
+                    if (collider.gameObject.CompareTag("AlivePlayer"))
                     {
                         GameObject targetObject = collider.gameObject;
                         Health playerHp = targetObject.GetComponent<Health>();

@@ -1,33 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] TurnManager turnManager;
-    [SerializeField] GameObject _endgameCanvas;
+    [SerializeField] GameObject _endgamePanel;
+    [SerializeField] TextMeshProUGUI _winPlayer;
 
-    bool _active = false;
+    bool isEnd = false;
 
     private void Start()
     {
         Time.timeScale = 1.0f;
-        _endgameCanvas.SetActive(false);
+        _endgamePanel.SetActive(false);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        //if(turnManager.AlivePlayers == 1)
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (turnManager.AlivePlayers == 1)
         {
             Time.timeScale = 0f;
-            _endgameCanvas.SetActive(true);
-        }
-
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
-            Time.timeScale = 1f;
-            _endgameCanvas.SetActive(false);
+            //Debug.Log(turnManager.GetLastPlayer().PlayerName);
+            _winPlayer.text = turnManager.GetLastPlayer().PlayerName;
+            _endgamePanel.SetActive(true);
+            isEnd = true;
         }
     }
+
+    public bool IsEnd { get { return isEnd; } }
 }
