@@ -5,10 +5,11 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public float maxHealth;
-    
     [SerializeField] Healthbar _healthbar;
 
     float _hp;
+
+    TurnManager _turnManager;
 
     void Start()
     {
@@ -21,12 +22,48 @@ public class Health : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("DeadZone"))
         {
+            _turnManager = FindAnyObjectByType<TurnManager>();
+            if (_turnManager != null)
+            {
+                _turnManager.DecreaseAlivePlayers(); 
+            }
             InstantDeath();
         }
     }
 
     public void TakeDamage(float amount)
     {
+        if (_turnManager == null)
+        {
+            _turnManager = FindAnyObjectByType<TurnManager>();
+        }
+
+        _hp -= amount;
+        _healthbar.UpdateHealthBar(maxHealth, _hp);
+        Debug.Log(_hp);
+
+        if (_hp <= 0)
+        {
+            _turnManager.DecreaseAlivePlayers();
+            Debug.Log("DEAD");
+            InstantDeath();
+        }
+    }
+
+    /*private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("DeadZone"))
+        {
+            _turnManager = FindAnyObjectByType<TurnManager>();
+            //Debug.Log(_turnManager.AlivePlayers);
+            InstantDeath();
+        }
+    }
+
+    public void TakeDamage(float amount)
+    {
+        _turnManager = FindAnyObjectByType<TurnManager>();
+        //Debug.Log(_turnManager.AlivePlayers);
         _hp -= amount;
         _healthbar.UpdateHealthBar(maxHealth, _hp);
         Debug.Log(_hp);
@@ -34,10 +71,9 @@ public class Health : MonoBehaviour
         if (_hp <= 0)
         {
             Debug.Log("DEAD");
-            _hp = 0;
-            Destroy(gameObject);
+            InstantDeath();
         }
-    }
+    }*/
 
     public void InstantDeath()
     {
