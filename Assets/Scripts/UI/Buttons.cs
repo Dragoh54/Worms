@@ -7,7 +7,7 @@ public class Buttons : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Load");
     }
 
     public void RestartGame()
