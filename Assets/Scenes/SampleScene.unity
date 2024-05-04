@@ -134,9 +134,9 @@ GameObject:
   - component: {fileID: 67704965}
   - component: {fileID: 67704964}
   - component: {fileID: 67704963}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: DeadZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -269,6 +269,14 @@ PrefabInstance:
       propertyPath: playerId
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3396937953808873897, guid: 7317cf512fbf9fc49b89c2e0ccd4239c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -43
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408863622918762316, guid: 7317cf512fbf9fc49b89c2e0ccd4239c, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 6049315162678146342, guid: 7317cf512fbf9fc49b89c2e0ccd4239c, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -280,6 +288,18 @@ PrefabInstance:
     - target: {fileID: 6049315162678146342, guid: 7317cf512fbf9fc49b89c2e0ccd4239c, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055499215315389369, guid: 7317cf512fbf9fc49b89c2e0ccd4239c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 712.6714
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055499215315389369, guid: 7317cf512fbf9fc49b89c2e0ccd4239c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.3671
+      objectReference: {fileID: 0}
+    - target: {fileID: 7962787394220917693, guid: 7317cf512fbf9fc49b89c2e0ccd4239c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -275.9999
       objectReference: {fileID: 0}
     - target: {fileID: 9035280362350697335, guid: 7317cf512fbf9fc49b89c2e0ccd4239c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -342,9 +362,9 @@ GameObject:
   - component: {fileID: 199627425}
   - component: {fileID: 199627424}
   - component: {fileID: 199627423}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square (1)
-  m_TagString: Untagged
+  m_TagString: DeadZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -470,9 +490,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 220522759}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Border
-  m_TagString: Untagged
+  m_TagString: DeadZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -590,9 +610,9 @@ GameObject:
   - component: {fileID: 785361031}
   - component: {fileID: 785361030}
   - component: {fileID: 785361029}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square (2)
-  m_TagString: Untagged
+  m_TagString: DeadZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -720,9 +740,9 @@ GameObject:
   - component: {fileID: 1196865729}
   - component: {fileID: 1196865728}
   - component: {fileID: 1196865727}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square (3)
-  m_TagString: Untagged
+  m_TagString: DeadZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1188,7 +1208,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.4294194, y: 3.0723915}
+    - - {x: 1.315887, y: 2.9475057}
       - {x: 0.41744164, y: 3.0132303}
       - {x: -0.44226807, y: 2.503425}
       - {x: -1.123365, y: 1.7635051}
@@ -1244,12 +1264,17 @@ PolygonCollider2D:
       - {x: 6.2901144, y: -1.1276971}
       - {x: 7.5395894, y: -0.4802881}
       - {x: 7.375574, y: -0.09326351}
-      - {x: 6.1175804, y: 0.15783376}
-      - {x: 4.9945693, y: 1.1078054}
-      - {x: 4.2405024, y: 1.4553148}
+      - {x: 6.6859756, y: 0.0012345463}
+      - {x: 6.3888073, y: 0.016957752}
+      - {x: 6.0267544, y: 0.08971429}
+      - {x: 5.7439446, y: 0.27241582}
+      - {x: 5.3353267, y: 0.62133604}
+      - {x: 4.881037, y: 1.0169793}
+      - {x: 4.1837363, y: 1.3871952}
       - {x: 3.2109003, y: 1.5629139}
-      - {x: 2.680004, y: 2.128053}
-      - {x: 2.1380284, y: 2.5082643}
+      - {x: 2.7865744, y: 1.827831}
+      - {x: 2.4642923, y: 2.0485804}
+      - {x: 1.9790831, y: 2.5196178}
   m_UseDelaunayMesh: 0
 --- !u!4 &1793816244
 Transform:

@@ -162,5 +162,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dmg: 10
-  _radius: 2
   _rigidbody: {fileID: 7366965371693734151}

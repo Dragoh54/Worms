@@ -22,7 +22,6 @@ public class TurnManager : MonoBehaviour
     {
         _shoot = _players[_turn].GetComponentInChildren<Shooting>();
         _ammo = FindAnyObjectByType<Ammo>();
-        //Debug.Log(_turn);
         NextTurn();
     }
 
@@ -30,13 +29,16 @@ public class TurnManager : MonoBehaviour
     {
         if (_shoot.IsShoot && !_ammo)
         {
-            if (_turn + 1 == _playersNumber)
+            int nextTurnIndex = (_turn + 1) % _playersNumber; 
+
+            for (int i = 0; i < _playersNumber; i++)
             {
-                _turn = 0;
-            }
-            else
-            {
-                _turn++;
+                int indexToCheck = (nextTurnIndex + i) % _playersNumber; 
+                if (_players[indexToCheck]) 
+                {
+                    _turn = indexToCheck; 
+                    break;
+                }
             }
 
             _shoot.IsShoot = false;

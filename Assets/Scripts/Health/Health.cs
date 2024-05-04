@@ -17,6 +17,14 @@ public class Health : MonoBehaviour
         _healthbar.UpdateHealthBar(maxHealth, _hp); 
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("DeadZone"))
+        {
+            InstantDeath();
+        }
+    }
+
     public void TakeDamage(float amount)
     {
         _hp -= amount;
@@ -29,5 +37,11 @@ public class Health : MonoBehaviour
             _hp = 0;
             Destroy(gameObject);
         }
+    }
+
+    public void InstantDeath()
+    {
+        _hp = 0;
+        Destroy(gameObject);
     }
 }
