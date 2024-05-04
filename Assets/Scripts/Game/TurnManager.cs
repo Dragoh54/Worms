@@ -20,12 +20,46 @@ public class TurnManager : MonoBehaviour
 
     private void Update()
     {
+        if (!_players[_turn])
+        {
+            SwitchToNextAlivePlayer();
+        }
+
+
         _shoot = _players[_turn].GetComponentInChildren<Shooting>();
         _ammo = FindAnyObjectByType<Ammo>();
         NextTurn();
     }
 
     public void NextTurn()
+    {
+        if (_shoot.IsShoot && !_ammo)
+        {
+            if (!_players[_turn].activeSelf)
+            {
+                SwitchToNextAlivePlayer();
+            }
+
+            _shoot.IsShoot = false;
+        }
+    }
+
+    private void SwitchToNextAlivePlayer()
+    {
+        int nextTurnIndex = (_turn + 1) % _playersNumber;
+
+        for (int i = 0; i < _playersNumber; i++)
+        {
+            int indexToCheck = (nextTurnIndex + i) % _playersNumber;
+            if (_players[indexToCheck].activeSelf)
+            {
+                _turn = indexToCheck;
+                break;
+            }
+        }
+    }
+
+    /*public void NextTurn()
     {
         if (_shoot.IsShoot && !_ammo)
         {
@@ -43,7 +77,7 @@ public class TurnManager : MonoBehaviour
 
             _shoot.IsShoot = false;
         }
-    }
+    }*/
 
     public int Turn { get { return _turn; } }
 }
