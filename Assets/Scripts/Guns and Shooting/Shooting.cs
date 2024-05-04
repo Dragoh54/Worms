@@ -42,7 +42,6 @@ public class Shooting : MonoBehaviour
         {
             _isAiming = true;
             _pointer.enabled=true;
-            _charger.Charge(true);
             _gun.enabled = true;
 
             _rigidbody.bodyType = RigidbodyType2D.Static;
@@ -58,8 +57,9 @@ public class Shooting : MonoBehaviour
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-            if (Input.GetMouseButton(1) && _speedMultiplier <= _maxSpeedMultiplier)
+            if (Input.GetKey(KeyCode.Space) && _speedMultiplier <= _maxSpeedMultiplier)
             {
+                _charger.Charge(true);
                 _speedMultiplier += Time.deltaTime;
                 //Debug.Log(_speedMultiplier);
                 _charger.UpdateChargeBar(_speedMultiplier,_maxSpeedMultiplier); 
@@ -83,6 +83,7 @@ public class Shooting : MonoBehaviour
             _pointer.enabled = false;
             _isShoot = true;
             _gun.enabled = false;
+            _isAiming = false;
             //_playerContr.enabled = true;
         }
     }

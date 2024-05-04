@@ -25,6 +25,7 @@ public class TurnManager : MonoBehaviour
             SwitchToNextAlivePlayer();
         }
 
+        Debug.Log(_turn);
 
         _shoot = _players[_turn].GetComponentInChildren<Shooting>();
         _ammo = FindAnyObjectByType<Ammo>();
@@ -35,10 +36,7 @@ public class TurnManager : MonoBehaviour
     {
         if (_shoot.IsShoot && !_ammo)
         {
-            if (!_players[_turn].activeSelf)
-            {
-                SwitchToNextAlivePlayer();
-            }
+            SwitchToNextAlivePlayer();
 
             _shoot.IsShoot = false;
         }
@@ -51,33 +49,13 @@ public class TurnManager : MonoBehaviour
         for (int i = 0; i < _playersNumber; i++)
         {
             int indexToCheck = (nextTurnIndex + i) % _playersNumber;
-            if (_players[indexToCheck].activeSelf)
+            if (_players[indexToCheck])
             {
                 _turn = indexToCheck;
                 break;
             }
         }
     }
-
-    /*public void NextTurn()
-    {
-        if (_shoot.IsShoot && !_ammo)
-        {
-            int nextTurnIndex = (_turn + 1) % _playersNumber; 
-
-            for (int i = 0; i < _playersNumber; i++)
-            {
-                int indexToCheck = (nextTurnIndex + i) % _playersNumber; 
-                if (_players[indexToCheck]) 
-                {
-                    _turn = indexToCheck; 
-                    break;
-                }
-            }
-
-            _shoot.IsShoot = false;
-        }
-    }*/
 
     public int Turn { get { return _turn; } }
 }
