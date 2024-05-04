@@ -277,6 +277,10 @@ PrefabInstance:
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 4854609532446115723, guid: 7317cf512fbf9fc49b89c2e0ccd4239c, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 156733939}
     - target: {fileID: 6049315162678146342, guid: 7317cf512fbf9fc49b89c2e0ccd4239c, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -288,6 +292,10 @@ PrefabInstance:
     - target: {fileID: 6049315162678146342, guid: 7317cf512fbf9fc49b89c2e0ccd4239c, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049315162678146342, guid: 7317cf512fbf9fc49b89c2e0ccd4239c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7055499215315389369, guid: 7317cf512fbf9fc49b89c2e0ccd4239c, type: 3}
       propertyPath: m_SizeDelta.y
@@ -344,13 +352,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 126923494470974558, guid: 7317cf512fbf9fc49b89c2e0ccd4239c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 156733939}
   m_SourcePrefab: {fileID: 100100000, guid: 7317cf512fbf9fc49b89c2e0ccd4239c, type: 3}
 --- !u!1 &156733932 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 126923494470974558, guid: 7317cf512fbf9fc49b89c2e0ccd4239c, type: 3}
   m_PrefabInstance: {fileID: 156733931}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &156733939
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156733932}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e443203a9b166a34880295fc3a93b6be, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &199627422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2972,7 +3004,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0.000061035156}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1979257411

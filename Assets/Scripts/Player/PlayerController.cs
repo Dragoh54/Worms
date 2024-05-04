@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform _groundCheck;
     [SerializeField] LayerMask _groundLayer;
 
-    public float raycastDistance = 1f;
+    public Animator animator;
 
     float _horizontal;
     bool _isRight = true;
@@ -27,8 +27,10 @@ public class PlayerController : MonoBehaviour
         _horizontal = Input.GetAxis("Horizontal"); 
         if(Input.GetKeyDown(KeyCode.Space) && _isGrounded && player.IsActive)
         {
-            _rb.velocity = new Vector2(_rb.velocity.x, _jumpPower);
+            _rb.AddForce(transform.up * _jumpPower, ForceMode2D.Impulse);
         }
+
+        animator.SetFloat("HorizontalMove", Mathf.Abs(_horizontal));
 
         Flip();
     }

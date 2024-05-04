@@ -123,34 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WormsSprites_0
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 131
-        width: 32
-        height: 35
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 380d53c8eafdabb4e892b0c144e1bc8e
-      internalID: 812133499
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: WormsSprites_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 87
-        width: 31
-        height: 35
+        x: 35
+        y: 131
+        width: 27
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +147,10 @@ TextureImporter:
       name: WormsSprites_2
       rect:
         serializedVersion: 2
-        x: 1
-        y: 34
-        width: 54
-        height: 32
+        x: 67
+        y: 131
+        width: 26
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +168,10 @@ TextureImporter:
       name: WormsSprites_3
       rect:
         serializedVersion: 2
-        x: 60
-        y: 13
-        width: 20
-        height: 21
+        x: 99
+        y: 131
+        width: 15
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,12 +189,12 @@ TextureImporter:
       name: WormsSprites_4
       rect:
         serializedVersion: 2
-        x: 116
-        y: 47
-        width: 15
-        height: 13
+        x: 118
+        y: 131
+        width: 12
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,6 +202,888 @@ TextureImporter:
       bones: []
       spriteID: 9cd950727a02c95489f5d6e1dbbf14de
       internalID: -631787657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_5
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 131
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf581860d2732649b9c4afe7f78f99e
+      internalID: 2076717111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_6
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 131
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f37cbb4dd7c714b9e618fc4349d6bb
+      internalID: -1342554884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_7
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 131
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b7034205144923479dd1d25446aa7e6
+      internalID: 121203106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_8
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 131
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f32fdf75f84a94e9e1cf65a69ebbf7
+      internalID: 2033344262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_9
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 114
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b55fd420a303c544a2785396b354b4f
+      internalID: 1613897318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 114
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd8de89defa67b4a9e8e5c3ed85bbd5
+      internalID: -1964673071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 131
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 1, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84dcc446d987684488df44f4264c65e7
+      internalID: -1384931476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_11
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 87
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e6eb8b6330a2ba499ad8e5885b16995
+      internalID: -1971345005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_12
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 80
+        width: 21
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 943637eaa2800094d8e2cd5e7363e7e3
+      internalID: 200269105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_13
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 74
+        width: 20
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e310bd17f3b3345ae216eca8bcf772
+      internalID: -1924972267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_14
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 73
+        width: 20
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 567e0fcf8ef524a4ebb29f8ca779838b
+      internalID: 1132410613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_15
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 73
+        width: 20
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2292a9bd428bda849874553d2152ec72
+      internalID: -1220187183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_16
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 104
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4271a6611a868940b8b3e199127dc9a
+      internalID: 436378140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_17
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 104
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09e6eecdf7f14e742a2c2cbba66447dc
+      internalID: -1924601177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_18
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 104
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1b3328497e23049b36738861a0723d
+      internalID: -1165591866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_19
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 86
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd90e7a2ef98ce4f979c854ca00045d
+      internalID: 2053355769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_20
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 86
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a8c1e93e4b29544bac277eaf210c16
+      internalID: -676731217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_21
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 86
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c18b3036f830847ad7e0b20d71b3f8
+      internalID: 707632146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_22
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 85
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9768ce28e206c0d48b85e4f51c457cd3
+      internalID: -821072502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 69
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25897dc7a4303d34f856be3ffd518d60
+      internalID: 410972412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_24
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 68
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3caa35cee3c8c194389c88ec808e15bf
+      internalID: -2021414202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_25
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 35
+        width: 52
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f54df728fce46c409a991e80a153972
+      internalID: -1969923726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_26
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 35
+        width: 52
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d260f320db9efdb41a1d2a3c074271fb
+      internalID: -1494733967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_27
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 45
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a7b7b93944e3540aa1fcec5206bcc0
+      internalID: -88907850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_28
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 57
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df585f9b2c58134f8fce65bbcd6e00c
+      internalID: 1502458828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_29
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 42
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14b11cb86c3ac444da8c7018a66ef2f5
+      internalID: -503904688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_30
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 42
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84d1e2d2c85e364c91dd6d2c6263111
+      internalID: 966362612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_31
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 49
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b159dcc8f159d824f88da743217aa83a
+      internalID: 185801105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_32
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 39
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7422a4ad4add9b4a9d828ac2b5bf6c4
+      internalID: -1751960642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_33
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 25
+        width: 12
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e6760bc7bc31b489492df01e396571
+      internalID: -390896812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_34
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 13
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f845971f2490c844f8290e4955af1055
+      internalID: 221305295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_35
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 13
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3881665973092f46838c408889b2efe
+      internalID: 704430496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_36
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 12
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec3519c2cd28b61429adffc6b4bbf528
+      internalID: 281148475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_37
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 13
+        width: 6
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7370de833f600734ca0b14cf475facdd
+      internalID: 108436496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_38
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 12
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95c01bab72fa946489bf44e7406b9904
+      internalID: -1092491074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_39
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 28
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868a5060b88cd7146b20cb3d0002c308
+      internalID: -701945571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_40
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 12
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb56b0f9f42bb3439a5d917de1c4df4
+      internalID: -1562275326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_41
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 10
+        width: 51
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ede3002726ce784387f5a91be96e458
+      internalID: -1551835226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_42
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 19
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c985a271c73811429aaf9fc1bcdfa7d
+      internalID: 1151688866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_43
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 12
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c316b8bdb87504698540ae3a9e37b9
+      internalID: -251089781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_44
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 12
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7105495f6a4eb74ebc5e4cd3d7fba09
+      internalID: -261022474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormsSprites_45
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 12
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e4c4dc4e68a3846b8c34931d20c0cc
+      internalID: 1105251931
       vertices: []
       indices: 
       edges: []
@@ -240,9 +1101,50 @@ TextureImporter:
     nameFileIdTable:
       WormsSprites_0: -1384931476
       WormsSprites_1: 145228808
+      WormsSprites_10: -1964673071
+      WormsSprites_11: -1971345005
+      WormsSprites_12: 200269105
+      WormsSprites_13: -1924972267
+      WormsSprites_14: 1132410613
+      WormsSprites_15: -1220187183
+      WormsSprites_16: 436378140
+      WormsSprites_17: -1924601177
+      WormsSprites_18: -1165591866
+      WormsSprites_19: 2053355769
       WormsSprites_2: -1974891552
+      WormsSprites_20: -676731217
+      WormsSprites_21: 707632146
+      WormsSprites_22: -821072502
+      WormsSprites_23: 410972412
+      WormsSprites_24: -2021414202
+      WormsSprites_25: -1969923726
+      WormsSprites_26: -1494733967
+      WormsSprites_27: -88907850
+      WormsSprites_28: 1502458828
+      WormsSprites_29: -503904688
       WormsSprites_3: 1533956821
+      WormsSprites_30: 966362612
+      WormsSprites_31: 185801105
+      WormsSprites_32: -1751960642
+      WormsSprites_33: -390896812
+      WormsSprites_34: 221305295
+      WormsSprites_35: 704430496
+      WormsSprites_36: 281148475
+      WormsSprites_37: 108436496
+      WormsSprites_38: -1092491074
+      WormsSprites_39: -701945571
       WormsSprites_4: -631787657
+      WormsSprites_40: -1562275326
+      WormsSprites_41: -1551835226
+      WormsSprites_42: 1151688866
+      WormsSprites_43: -251089781
+      WormsSprites_44: -261022474
+      WormsSprites_45: 1105251931
+      WormsSprites_5: 2076717111
+      WormsSprites_6: -1342554884
+      WormsSprites_7: 121203106
+      WormsSprites_8: 2033344262
+      WormsSprites_9: 1613897318
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
