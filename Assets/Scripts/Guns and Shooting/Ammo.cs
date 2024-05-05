@@ -7,6 +7,8 @@ public class Ammo : MonoBehaviour
     [SerializeField] float _dmg;
     [SerializeField] Rigidbody2D _rigidbody;
 
+    [SerializeField] Sounds _bombSounds;
+
     Destroyer _destroyer;
     PolygonCollider2D _destroyerCollider;
     bool _active = true;
@@ -19,9 +21,13 @@ public class Ammo : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        _destroyer.transform.position = transform.position;
-        Invoke(nameof(DoCut), 0.0001f);
-        Hit();
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            _bombSounds.PlaySound(0, rnd: true, destroy: true);
+            _destroyer.transform.position = transform.position;
+            Invoke(nameof(DoCut), 0.0001f);
+            Hit();
+        }
     }
 
     void DoCut()

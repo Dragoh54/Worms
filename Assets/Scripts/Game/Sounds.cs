@@ -17,7 +17,7 @@ public class Sounds : MonoBehaviour
     {
         AudioClip clip = rnd ? soundArrays[id].soundArray[Random.Range(0, soundArrays[id].soundArray.Length)] : clips[id];
 
-        _audioSrc.PlayOneShot(clip, volume);
+        //_audioSrc.PlayOneShot(clip, volume);
 
         if (destroy)
         {
