@@ -13,7 +13,7 @@ public class Shooting : MonoBehaviour
     [SerializeField] Charger _charger;
 
     [SerializeField] float _maxSpeedMultiplier = 2f;
-    float _speedMultiplier = 0.5f;
+    float _speedMultiplier = 1f;
 
     [SerializeField] Rigidbody2D _rigidbody;
     [SerializeField] PlayerController _playerContr;
@@ -71,7 +71,8 @@ public class Shooting : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(0) && _isAiming)
+        //if (Input.GetMouseButtonDown(0) && _isAiming)
+        if (Input.GetKeyUp(KeyCode.Space) && _isAiming)
         {
             _gunSounds.StopSound();
             _gunSounds.PlaySound(1);
