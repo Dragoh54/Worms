@@ -13,13 +13,15 @@ public class Shooting : MonoBehaviour
     [SerializeField] Charger _charger;
 
     [SerializeField] float _maxSpeedMultiplier = 2f;
-    float _speedMultiplier = 0.01f;
+    float _speedMultiplier = 0.5f;
 
     [SerializeField] Rigidbody2D _rigidbody;
     [SerializeField] PlayerController _playerContr;
 
     Camera _camera;
     CameraFollow _cf;
+
+    [SerializeField] Sounds _gunSounds;
 
     bool _isAiming = false;
     bool _isShoot;
@@ -61,13 +63,19 @@ public class Shooting : MonoBehaviour
             {
                 _charger.Charge(true);
                 _speedMultiplier += Time.deltaTime;
-                //Debug.Log(_speedMultiplier);
+
+                Debug.Log(_gunSounds.GetAudioClip(0).name);
+                _gunSounds.PlaySound(0, 0.1f);
+
                 _charger.UpdateChargeBar(_speedMultiplier,_maxSpeedMultiplier); 
             }
         }
 
         if (Input.GetMouseButtonDown(0) && _isAiming)
         {
+            _gunSounds.StopSound();
+            _gunSounds.PlaySound(1);
+
             Vector3 screenMousePosition = Input.mousePosition;
             Vector3 worldMousePosition = _camera.ScreenToWorldPoint(screenMousePosition);
             Vector3 direction = worldMousePosition - transform.position;
