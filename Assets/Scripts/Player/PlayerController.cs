@@ -32,6 +32,17 @@ public class PlayerController : MonoBehaviour
 
         animator.SetFloat("HorizontalMove", Mathf.Abs(_horizontal));
 
+        Debug.Log(!_isGrounded);
+
+        if (!_isGrounded)
+        {
+            animator.SetBool("Jump", true);
+        }
+        else
+        {
+            animator.SetBool("Jump", false);
+        }
+
         Flip();
     }
 
