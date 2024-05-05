@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
 
         animator.SetFloat("HorizontalMove", Mathf.Abs(_horizontal));
 
-        Debug.Log(!_isGrounded);
+        //Debug.Log(!_isGrounded);
 
         if (!_isGrounded)
         {
@@ -73,7 +73,8 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == ("Ground"))
+        Debug.Log("Exit");
+        if (collision.gameObject.tag == ("Ground") && _rb.bodyType != RigidbodyType2D.Static)
         {
             _isGrounded = false;
         }
