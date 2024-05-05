@@ -16,17 +16,27 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform _groundCheck;
     [SerializeField] LayerMask _groundLayer;
 
+    [SerializeField] Sounds _moveSounds;
+
+    Shooting _shoot;
+
     public Animator animator;
 
     float _horizontal;
     bool _isRight = true;
     bool _isGrounded = false;
 
+    private void Start()
+    {
+        _shoot = FindAnyObjectByType<Shooting>();
+    }
+
     private void Update()
     {
-        _horizontal = Input.GetAxis("Horizontal"); 
-        if(Input.GetKeyDown(KeyCode.Space) && _isGrounded && player.IsActive)
+        _horizontal = Input.GetAxis("Horizontal");
+        if (Input.GetKeyDown(KeyCode.Space) && _isGrounded && player.IsActive && !_shoot.IsAiming)
         {
+            _moveSounds.PlaySound(0);
             _rb.AddForce(transform.up * _jumpPower, ForceMode2D.Impulse);
         }
 

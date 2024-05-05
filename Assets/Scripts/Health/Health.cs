@@ -6,10 +6,10 @@ public class Health : MonoBehaviour
 {
     public float maxHealth;
     [SerializeField] Healthbar _healthbar;
+    
+    [SerializeField] Sounds _hurtSounds;
 
     float _hp;
-
-    TurnManager _turnManager;
 
     void Start()
     {
@@ -30,6 +30,7 @@ public class Health : MonoBehaviour
     {
         _hp -= amount;
         _healthbar.UpdateHealthBar(maxHealth, _hp);
+        _hurtSounds.PlaySound(0, rnd: true, destroy: true, p1: 2.5f, p2: 3f);
         Debug.Log(_hp);
 
         if (_hp <= 0)

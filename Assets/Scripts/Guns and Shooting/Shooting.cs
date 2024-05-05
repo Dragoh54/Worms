@@ -48,6 +48,7 @@ public class Shooting : MonoBehaviour
 
             _rigidbody.bodyType = RigidbodyType2D.Static;
             _playerContr.enabled = false;
+            //Debug.Log(_playerContr.enabled);
         }
 
         if (_isAiming)
@@ -75,7 +76,7 @@ public class Shooting : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space) && _isAiming)
         {
             _gunSounds.StopSound();
-            _gunSounds.PlaySound(1);
+            _gunSounds.PlaySound(0, rnd: true);
 
             Vector3 screenMousePosition = Input.mousePosition;
             Vector3 worldMousePosition = _camera.ScreenToWorldPoint(screenMousePosition);
@@ -98,4 +99,5 @@ public class Shooting : MonoBehaviour
     }
 
     public bool IsShoot {get { return _isShoot; } set { _isShoot = value; } }
+    public bool IsAiming { get { return _isAiming; } }
 }

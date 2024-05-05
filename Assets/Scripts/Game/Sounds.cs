@@ -25,6 +25,7 @@ public class Sounds : MonoBehaviour
         }
         else
         {
+            _audioSrc.pitch = Random.Range(p1, p2);
             _audioSrc.PlayOneShot(clip, volume);
         }
     }
